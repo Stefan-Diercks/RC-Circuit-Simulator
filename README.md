@@ -20,7 +20,7 @@ v(t) = V0(1-e^(-t/(r*c)))
 -for discharging I used 
 V(t) = V0(e^(-t/(r*c)))
 
--To gain the information I needed to make the graph I used Input code so that the use would be able to change what the capacitance, resistance, and  voltage was 
+-To gain the information I needed to make the graph I used Input code so that the user would be able to change what the capacitance, resistance, and  voltage was 
 
 - after this 
 
@@ -33,6 +33,15 @@ HOW TO RUN
 
 - then input values and Voilia!
 
+  PROJECT GOALS
+
+  - The main goal for this project was to develope my ability to code in python. I knew as a developing engineer it was import to start working on the little skills that might help me later on. So combining the python I know and simple RC circuits I knew it would be a positive in the worthwhile.
+
+
+    START/END DATE
+
+    start: 2/28/2026
+    end: 3/4/2026
 
 
 
