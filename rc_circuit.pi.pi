@@ -1,0 +1,41 @@
+import numpy as np
+import matplotlib.pyplot as plt 
+
+mode = input("type 'charge' or 'discharge' to select the mode of the circuit: \n").strip().lower()
+
+
+
+r = float(input("What is the resistance of the circuit in Ohms? \n"))  
+c = float(input("what is the capacity of the circuit in farads? \n"))    
+v0 = float(input("what is the voltage of the source in volts? \n"))   
+
+ta = r * c
+t_end = 5 * ta
+t = np.linspace(0, t_end, 1000)
+
+if mode == "charge":
+    vc = v0 * (1- np.exp(-t/ta))
+    title = f"RC Charging (R={r}Ω, C={c}F, τ={ta:.3f}s)"
+
+elif mode == "discharge":
+    v_initial = v0
+    vc = v_initial * np.exp(-t/ta)
+    title = f"RC Discharging (R={r}Ω, C={c}F, τ={ta:.3f}s)"
+else:
+    print(" please select a mode")
+    #plotting
+
+plt.plot(t,vc)
+plt.xlabel("time (s)")
+plt.ylabel("capacitator voltage (V)")
+plt.title(title)
+plt.grid(True)
+plt.show()
+
+
+
+
+
+
+
+
